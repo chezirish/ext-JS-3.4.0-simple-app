@@ -1,13 +1,12 @@
 Ext.onReady(function() {
 
-
+    //Запрет на дефолдное контекстное меню для более удобного управления приложением
     Ext.EventManager.on(document, 'contextmenu', function(e) {
             e.preventDefault();     
     });
 
 
     var tree = new Ext.tree.TreePanel({
-        // renderTo: 'tree',
         pageX : 200,
         useArrows: true,
         autoScroll: true,
@@ -165,16 +164,6 @@ Ext.onReady(function() {
         }
     });
 
-     // Ext.create('Ext.Button', {
-     //    renderTo: Ext.getElementById('buttonId'),
-     //    text: 'Click Me',
-     //    listeners: {
-     //       click: function() {
-     //          win.show();
-     //       }
-     //    }
-     // });
-
     winTree = new Ext.Window({
         x: 100,
         y: 100,
@@ -198,7 +187,6 @@ Ext.onReady(function() {
             }
         }
      });
-    // winTree.setPosition(100, 100);
 
 
     var rt = Ext.data.Record.create([
@@ -214,34 +202,5 @@ Ext.onReady(function() {
             rt
         )
     });   
-
-
-    // var defaultData = {
-    //     name: 'obj',
-    //     desc: 'some obj'
-    // };
-
-    // var r = new myStore.recordType(defaultData, defaultData.name); // create new record
-    // myStore.add(r);
-
-
-
-    // var lol = {
-    //     name: 'obj2',
-    //     desc: 'some obj2'
-    // };
-
-    // var r = new myStore.recordType(lol, lol.name); // create new record
-    // myStore.add(r);
-
-
-
-
-    addEventListener('click', function() {
-         
-                    
-        // console.log(myStore.getById(123))
-
-    })
 
 });   
