@@ -45,7 +45,7 @@ Ext.onReady(function() {
                             myStore.removeAt(Ext.get("name").dom.value);
                             n.remove();
                         } else {
-                            Ext.Msg.alert('Свойства объкта', 'Нельзя удалить корневой объект'); 
+                            Ext.Msg.alert('Свойства объекта', 'Нельзя удалить корневой объект'); 
                         }
                     } else if(item.id == 'add'){
                             n.appendChild({
@@ -92,7 +92,7 @@ Ext.onReady(function() {
             hidden: true,
         }],
         hidden: false,
-        title:'Свойства объкта',
+        title:'Свойства объекта',
         layout:'form',
         width: 400,
         closeAction:'close',
@@ -110,7 +110,7 @@ Ext.onReady(function() {
            text: 'Сохранить',
            handler: function(){
                 if(Ext.query('.x-tree-selected[id=extdd-1]')[0]){
-                    Ext.Msg.alert('Свойства объкта', 'Нельзя изменить корневой объект');                    
+                    Ext.Msg.alert('Свойства объекта', 'Нельзя изменить корневой объект');                    
                 } else if(Ext.query('.x-tree-selected')[0]){
                     var nameOfObj = Ext.get("name").dom.value;
                     var descOfObj = Ext.get("desc").dom.value;
@@ -127,7 +127,7 @@ Ext.onReady(function() {
                         var record = new myStore.recordType(obj, obj.name);
                         myStore.add(record);
 
-                        Ext.Msg.alert('Свойства объкта', 'Свойства к объекту сохранены!');
+                        Ext.Msg.alert('Свойства объекта', 'Свойства к объекту сохранены!');
                     } else if(nameOfObj === '') {
                         var obj = {
                             name: Ext.query('.x-tree-selected a span')[0].innerHTML,
@@ -140,19 +140,19 @@ Ext.onReady(function() {
                             myStore.removeAt(obj.name);
                             var record = new myStore.recordType(obj, obj.name);
                             myStore.add(record); 
-                            Ext.Msg.alert('Свойства объкта', 'Свойства к объекту сохранены!');
+                            Ext.Msg.alert('Свойства объекта', 'Свойства к объекту сохранены!');
                         } else{
-                            Ext.Msg.alert('Свойства объкта', 'У объекта должно быть имя!');                                              
+                            Ext.Msg.alert('Свойства объекта', 'У объекта должно быть имя!');                                              
                         }  
                     } else {
                         Ext.getCmp('name').setValue('');
                         Ext.getCmp('desc').setValue('');      
-                        Ext.Msg.alert('Свойства объкта', 'Такой объект уже существует!');                                          
+                        Ext.Msg.alert('Свойства объекта', 'Такой объект уже существует!');                                          
                     }
                     
 
                 } else {
-                    Ext.Msg.alert('Свойства объкта', 'Выберете объект!');               
+                    Ext.Msg.alert('Свойства объекта', 'Выберете объект!');               
                 } 
            }
         }],
@@ -176,7 +176,7 @@ Ext.onReady(function() {
         draggable: false,
         resizable: false,
         hidden: false,
-        title:'Дерево объктов',
+        title:'Дерево объектов',
         width: 400,
         plain: true,
         items: [tree],
