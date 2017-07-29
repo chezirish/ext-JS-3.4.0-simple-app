@@ -45,7 +45,7 @@ Ext.onReady(function() {
                             myStore.removeAt(Ext.get("name").dom.value);
                             n.remove();
                         } else {
-                            Ext.Msg.alert('Свойства объкта', 'Нельзя удалить корневой объект'); 
+                            Ext.Msg.alert('Свойства объекта', 'Нельзя удалить корневой объект'); 
                         }
                     } else if(item.id == 'add'){
                             n.appendChild({
